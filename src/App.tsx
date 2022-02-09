@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { Form } from 'components/Form';
-import { Quote } from 'components/Quote';
-import { Spinner } from 'components/Spinner';
 import React, { useEffect, useState } from 'react';
-import { GlobalStyles } from 'styles/globalStyles';
 
 import img from './assets/images/cryptomonedas.png';
+import { Form } from './components/Form';
+import { Quote } from './components/Quote';
+import { Spinner } from './components/Spinner';
+import { GlobalStyles } from './styles/globalStyles';
 import { Container, Heading, Image } from './styles/styles';
 
 function App() {

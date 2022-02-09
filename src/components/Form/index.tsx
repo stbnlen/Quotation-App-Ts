@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { Error } from 'components/Error';
-import { useCoin } from 'hooks/useCoin';
-import { useCrypto } from 'hooks/useCrypto';
-import { useGetData } from 'hooks/useGetData';
 import React, { useState } from 'react';
 
+import { useCoin } from '../../hooks/useCoin';
+import { useCrypto } from '../../hooks/useCrypto';
+import { useGetData } from '../../hooks/useGetData';
+import { Error } from '../Error';
 import { Button } from './styles';
 
 type Props = {
