@@ -10,6 +10,7 @@ import { Container, Heading, Image } from './styles';
 export const AppContainer = () => {
   const [coin, setCoin] = useState('');
   const [crypto, setCrypto] = useState('');
+  // TODO Cambiar este any
   const [result, setResult] = useState<any>({});
   const [loading, setLoading] = useState(false);
 
