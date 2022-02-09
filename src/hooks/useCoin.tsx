@@ -6,7 +6,7 @@ export const useCoin = (label: any, initialState: any, options: any) => {
   // State del custom hook
   const [state, setState] = useState(initialState);
 
-  const Seleccionar = (
+  const Seleccionar = () => (
     <CoinSelect label={label} setState={setState} state={state} options={options} />
   );
 

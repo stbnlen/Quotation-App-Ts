@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import { useSelect } from 'hooks/useSelect';
+import React from 'react';
 
-import { useCoin } from '../../hooks/useCoin';
-import { useCrypto } from '../../hooks/useCrypto';
-import { useGetData } from '../../hooks/useGetData';
 import { Error } from '../Error';
 import { Button } from './styles';
 
@@ -13,32 +11,10 @@ type Props = {
 };
 
 export const Form: React.FC<Props> = ({ guardarMoneda, guardarCriptomoneda }) => {
-  const cryptoList = useGetData();
-  const [error, setError] = useState(false);
-
-  const MONEDAS = [
-    { codigo: 'USD', nombre: 'Dolar de Estados Unidos' },
-    { codigo: 'MXN', nombre: 'Peso Mexicano' },
-    { codigo: 'EUR', nombre: 'Euro' },
-    { codigo: 'GBP', nombre: 'Libra Esterlina' },
-    { codigo: 'CLP', nombre: 'Peso Chileno' },
-  ];
-
-  const [moneda, SelectCoin] = useCoin('Elige tu moneda', '', MONEDAS);
-  const [crypto, SelectCrypto] = useCrypto('Elige tu criptomoneda', '', cryptoList);
-
-  const handleSubmit = (e: React.SyntheticEvent) => {
-    e.preventDefault();
-
-    if (moneda === '' || crypto === '') {
-      setError(true);
-      return;
-    }
-
-    setError(false);
-    guardarMoneda(moneda);
-    guardarCriptomoneda(crypto);
-  };
+  const { error, SelectCoin, SelectCrypto, handleSubmit } = useSelect(
+    guardarMoneda,
+    guardarCriptomoneda,
+  );
 
   return (
     <form onSubmit={handleSubmit}>
