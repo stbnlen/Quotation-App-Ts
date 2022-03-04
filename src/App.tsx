@@ -1,7 +1,6 @@
-import { AppContainer } from 'Container';
+import { AppContainer } from '@layout';
+import { GlobalStyles } from '@styles/globalStyles';
 import React from 'react';
-
-import { GlobalStyles } from './styles/globalStyles';
 
 function App() {
   return (

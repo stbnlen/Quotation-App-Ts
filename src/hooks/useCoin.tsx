@@ -1,6 +1,5 @@
+import { CoinSelect } from '@containers/CoinSelect';
 import React, { useState } from 'react';
-
-import { CoinSelect } from './containers/CoinSelect';
 
 export const useCoin = (label: any, initialState: any, options: any) => {
   // State del custom hook

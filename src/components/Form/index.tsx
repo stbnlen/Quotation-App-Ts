@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useSelect } from 'hooks/useSelect';
+import { useSelect } from '@hooks/useSelect';
 import React from 'react';
 
 import { Error } from '../Error';

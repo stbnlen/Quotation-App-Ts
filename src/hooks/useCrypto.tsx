@@ -1,6 +1,5 @@
+import { CryptoSelect } from '@containers/CryptoSelect';
 import React, { useState } from 'react';
-
-import { CryptoSelect } from './containers/CryptoSelect';
 
 export const useCrypto = (label: any, initialState: any, options: any) => {
   // State del custom hook
